@@ -1,0 +1,84 @@
+﻿@model IEnumerable<finalProject.Models.apointement>
+
+@{
+    ViewBag.Title = "Index";
+   
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")<br />
+    @Html.ActionLink("Send Message ", "Create", "tenantManagerMessages")
+
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manager.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenant.firstName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.tenentId == finalProject.Controllers.staticclass.name)
+        {
+
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.manager.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tenant.firstName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.apointmentId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.apointmentId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.apointmentId })
+                </td>
+            </tr>
+        }
+        else if (item.managerId == finalProject.Controllers.staticclass.name)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.manager.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tenant.firstName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.apointmentId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.apointmentId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.apointmentId })
+                </td>
+            </tr>
+
+        }
+    }
+
+</table>

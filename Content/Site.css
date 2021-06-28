@@ -1,0 +1,59 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: white;
+    font-weight:bold;
+    background-color: #151262;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.jumbotron {
+    background-image: url("./main.png");
+    color:white;
+    margin:0px;
+    text-align:center;
+}
+.nav {
+    margin-top: 0px;
+    background-color: #151262;
+    color:white;
+    
+}
+li
+{
+    color:white;
+}
+footer {
+    text-align: center;
+}
+.searchtitle{
+    text-align: center;
+    font-weight: bold;
+    color:white;
+}
+.searchtitlesearch {
+    text-align: center;
+    font-weight: bold;
+    color: #151262;
+}
+a{
+    color:white;
+}

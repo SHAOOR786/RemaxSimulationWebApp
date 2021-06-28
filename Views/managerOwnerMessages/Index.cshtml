@@ -1,0 +1,50 @@
+﻿@model IEnumerable<finalProject.Models.managerOwnerMessage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reports To Owner</h2>
+
+<p>
+    @Html.ActionLink("Report to Owner", "Create")<br />
+
+    @Html.ActionLink("Check Appointments and Messages to Tenants", "Index", "apointements")<br />
+    @Html.ActionLink("CRUD Buildings", "Index", "buildings")<br />
+    @Html.ActionLink("CRUD Appartments", "Index", "appartements")
+    
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manager.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner.firstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manager.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner.firstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.messageId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.messageId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.messageId })
+        </td>
+    </tr>
+}
+
+</table>

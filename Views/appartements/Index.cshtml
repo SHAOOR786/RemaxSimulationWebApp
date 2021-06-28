@@ -1,0 +1,69 @@
+﻿@model IEnumerable<finalProject.Models.appartement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.appartementNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.buildingNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.roomNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.washroomNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.floorNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status.statusId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tenant.firstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.appartementNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.buildingNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.roomNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.washroomNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.floorNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.status.statusId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tenant.firstName)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.appartementNo }) |
+        @Html.ActionLink("Details", "Details", new { id = item.appartementNo }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.appartementNo })
+    </td>
+</tr>
+}
+
+</table>

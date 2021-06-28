@@ -1,0 +1,68 @@
+﻿@model IEnumerable<finalProject.Models.appartement>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>REMAX</h1>
+    <p class="lead">Bring Your Dreams come True!!</p>
+</div>
+
+<h2 class="searchtitle">SEARCH APPARTEMENTS WITH THE BUILDING NUMBER</h2>
+<div class="searchtitlesearch">
+    <p >
+        @using (@Html.BeginForm("index", "Home", FormMethod.Get))
+        {
+            @Html.TextBox("search")
+            <input type="submit" value="Search" />
+        }
+    </p>
+</div>
+<table class="table">
+    <th>
+        @Html.DisplayNameFor(model => model.buildingNo)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.roomNo)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.washroomNo)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.floorNo)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.status.statusId)
+    </th>
+    <th>
+        @Html.DisplayName( "Tenant Name")
+    </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.buildingNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.roomNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.washroomNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.floorNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.status.statusId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tenant.firstName)
+    </td>
+    
+</tr>
+    }
+
+</table>

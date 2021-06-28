@@ -1,0 +1,38 @@
+﻿@model IEnumerable<finalProject.Models.managerOwnerMessage>
+
+@{
+    ViewBag.Title = "Reports";
+}
+
+<h2>Reports</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manager.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner.firstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manager.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner.firstName)
+        </td>
+       
+    </tr>
+}
+
+</table>

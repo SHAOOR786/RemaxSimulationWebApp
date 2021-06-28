@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a1aa65566d174b1bbd64541423bae0a3" Name="Diagram1">
+        <EntityTypeShape EntityType="FinalDatabaseModel.apointement" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.appartement" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.building" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.manager" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.managerOwnerMessage" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.owner" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.status" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.sysdiagram" Width="1.5" PointX="2.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.tenant" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinalDatabaseModel.tenantManagerMessage" Width="1.5" PointX="7.5" PointY="16" IsExpanded="true" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_apointement_manager" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_apointement_tenant" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_building_manager" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_building_owner" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK__manager__ownerId__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK__managerOw__manag__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK__tenant__managerI__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_tenantManagerMessage_manager" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK__managerOw__owner__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_tenantManagerMessage_tenant" ManuallyRouted="false" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_appartement_status" />
+        <AssociationConnector Association="FinalDatabaseModel.FK_appartement_tenant" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,66 @@
+﻿@model finalProject.Models.appartement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>appartement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.buildingNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.buildingNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.roomNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.roomNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.washroomNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.washroomNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.floorNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.floorNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status.statusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status.statusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenant.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenant.firstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.appartementNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

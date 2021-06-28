@@ -1,0 +1,96 @@
+﻿@model IEnumerable<finalProject.Models.building>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.streetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.manager.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner.firstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    if (item.managerId == finalProject.Controllers.staticclass.name)
+    {
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.streetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manager.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner.firstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.buildingNo }) |
+            @Html.ActionLink("Details", "Details", new { id = item.buildingNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.buildingNo })
+        </td>
+    </tr>
+    }
+    else if (item.ownerId== finalProject.Controllers.staticclass.name)
+    {
+         <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.streetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.manager.firstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner.firstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.buildingNo }) |
+            @Html.ActionLink("Details", "Details", new { id = item.buildingNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.buildingNo })
+        </td>
+    </tr>
+    }
+}
+
+</table>
